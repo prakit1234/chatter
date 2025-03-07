@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatter - Chat</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/chat.css">
+</head>
+<body>
+    <div class="chat-container">
+        <nav class="sidebar">
+            <div class="user-profile">
+                <img id="profile-picture" src="assets/images/default-avatar.png" alt="Profile">
+                <div class="user-info">
+                    <span id="username-display"></span>
+                    <a href="profile.html" class="edit-profile">
+                        <i class="fas fa-edit"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="nav-sections">
+                <button class="nav-button active" data-section="chats">
+                    <i class="fas fa-comments"></i> Chats
+                </button>
+                <button class="nav-button" data-section="groups">
+                    <i class="fas fa-users"></i> Groups
+                </button>
+                <button class="nav-button" data-section="contacts">
+                    <i class="fas fa-address-book"></i> Contacts
+                </button>
+            </div>
+
+            <div id="chat-list" class="chat-list">
+                <!-- Chat list will be populated here -->
+            </div>
+
+            <button id="logout-btn" class="logout-button">
+                <i class="fas fa-sign-out-alt"></i> Logout
+            </button>
+        </nav>
+
+        <main class="chat-main">
+            <div id="chat-header" class="chat-header">
+                <!-- Active chat info -->
+            </div>
+
+            <div id="messages" class="messages">
+                <!-- Messages will be populated here -->
+            </div>
+
+            <div class="chat-input">
+                <form id="message-form">
+                    <div class="input-container">
+                        <button type="button" id="emoji-btn">
+                            <i class="far fa-smile"></i>
+                        </button>
+                        <input type="text" id="message-input" placeholder="Type a message...">
+                        <button type="button" id="attach-btn">
+                            <i class="fas fa-paperclip"></i>
+                        </button>
+                    </div>
+                    <button type="submit" class="send-btn">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </main>
+    </div>
+
+    <script type="module" src="js/chat.js"></script>
+</body>
+</html>
